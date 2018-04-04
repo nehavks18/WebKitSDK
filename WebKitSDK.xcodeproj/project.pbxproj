@@ -10,6 +10,7 @@
 		91D8683C207485D300E5099A /* WebKitSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91D86832207485D200E5099A /* WebKitSDK.framework */; };
 		91D86841207485D300E5099A /* WebKitSDKTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D86840207485D300E5099A /* WebKitSDKTests.swift */; };
 		91D86843207485D300E5099A /* WebKitSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 91D86835207485D200E5099A /* WebKitSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		91D8684D2074869000E5099A /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D8684C2074869000E5099A /* WebView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,7 @@
 		91D8683B207485D300E5099A /* WebKitSDKTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WebKitSDKTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		91D86840207485D300E5099A /* WebKitSDKTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebKitSDKTests.swift; sourceTree = "<group>"; };
 		91D86842207485D300E5099A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		91D8684C2074869000E5099A /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 			children = (
 				91D86835207485D200E5099A /* WebKitSDK.h */,
 				91D86836207485D200E5099A /* Info.plist */,
+				91D8684C2074869000E5099A /* WebView.swift */,
 			);
 			path = WebKitSDK;
 			sourceTree = "<group>";
@@ -148,6 +151,7 @@
 				TargetAttributes = {
 					91D86831207485D200E5099A = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 					91D8683A207485D300E5099A = {
@@ -196,6 +200,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91D8684D2074869000E5099A /* WebView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,6 +339,7 @@
 		91D86847207485D300E5099A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -346,6 +352,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = headerlabs.com.WebKitSDK;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -354,6 +361,7 @@
 		91D86848207485D300E5099A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -374,6 +382,7 @@
 		91D8684A207485D300E5099A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = WebKitSDKTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -387,6 +396,7 @@
 		91D8684B207485D300E5099A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = WebKitSDKTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
